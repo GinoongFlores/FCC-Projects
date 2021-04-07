@@ -1,0 +1,104 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  text-align: center;
+  background-color: #dddddd;
+}
+
+#title {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+#img {
+  max-width: 100%;
+  height: auto;
+}
+
+#img-div {
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+hr {
+  margin-top: 10px;
+}
+
+h4 {
+  text-align: left;
+}
+
+ul {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto 50px auto;
+}
+
+#tribute-info,
+li {
+  margin: 20px 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    max-width: 450px;
+  }
+
+  #tribute-info,
+  li {
+    margin: 15px 0;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 1rem;
+  }
+
+  ul {
+    max-width: 400px;
+  }
+
+  #tribute-info,
+  li {
+    margin: 15px 0;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  ul {
+    max-width: 300px;
+  }
+
+  #tribute-info,
+  li {
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+}

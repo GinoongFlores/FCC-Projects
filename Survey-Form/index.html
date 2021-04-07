@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="header">
+      <h1 id="title">Your Future Tech Job Survey</h1>
+      <p id="description">Let us know your future job someday!</p>
+    </div>
+
+    <form id="survey-form">
+      <div class="text-input">
+        <label for="name">Name </label>
+        <input type="text" id="name-label" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="text-input">
+        <label for="email">Email </label>
+        <input type="email" id="email-label" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="text-input">
+        <label for="age">Age </label>
+        <input type="number" id="number-label" name="age" min="10" max="150" placeholder="Enter your age">
+      </div>
+
+      <div class="text-input">
+        <label for="jobs">What kind of Tech job you like? </label>
+        <select name="jobs" id="dropdown" required>
+          <option value="Cloud-Computing-Engineer">Cloud Computing Engineer</option>
+          <option value="Computer-Network-Specialist">Computer Network Specialist</option>
+          <option value="Computer-Support-Specialist">Computer Support Specialist</option>
+          <option value="Database-Administrator">Database Administrator</option>
+          <option value="Information-Technology-Analyst">Information Technology Analyst</option>
+          <option value="Information-Technology-Leadership">Information Technology Leadership</option>
+          <option value="Information-Security-Specialist">Information Security Specialist</option>
+          <option value="Software/Application-Developer">Software/Application Developer</option>
+          <option value="Web Developer">Web Developer</option>
+        </select>
+      </div>
+
+      <div class="text-input">
+        <label for="degrees">How would you achieve your future job?</label>
+        <input type="radio" name="user" value="self-taught" class="user-radio"> Self-Taught
+        <br>
+        <input type="radio" name="user" value="bootcamp" class="user-radio"> Bootcamp
+        <br>
+        <input type="radio" name="user" value="bachelor" class="user-radio"> Bachelors Degree
+        <br>
+        <input type="radio" name="user" value="bachelor&doctorate" class="user-radio"> Bachelors & Doctorate Degree
+      </div>
+
+      <div class="text-input">
+        <label for="prefer">What are the characteristics of your Tech job</label>
+        <input type="checkbox" name="characteristics" class="user-check" value="salary"> Good Salary
+        <br>
+        <input type="checkbox" name="characteristics" class="user-check" value="workplace"> Nice Workplace
+        <br>
+        <input type="checkbox" name="characteristics" class="user-check" value="benefits"> Lots of Benefits
+        <br>
+        <input type="checkbox" name="characteristics" class="user-check" value="friendly"> Friendly Coworkers
+      </div>
+
+      <div class="text-input">
+        <label for="feedback">Wanna give us a Feedback?</label>
+        <textarea name="feedback" id="feedback" placeholder="leave us some feedbacks"></textarea>
+      </div>
+
+      <button type="submit" name="submit" id="submit">Submit</button>
+
+    </form>
+  </div>
+
+
+</body>
+
+</html>

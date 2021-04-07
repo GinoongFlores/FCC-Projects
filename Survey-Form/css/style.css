@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/programming.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  color: #e0dfdc;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
+    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222,
+    0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a,
+    0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212,
+    0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+#description {
+  color: #444444;
+  text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+    4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+    7px 6px 1px #cccccc;
+  font-size: larger;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+#header {
+  text-align: center;
+}
+
+#survey-form {
+  max-width: 800px;
+  margin: 0 auto 1.2rem auto;
+  border-radius: 10px;
+  background-color: #90acff;
+  padding: 20px;
+}
+
+#name-label,
+#email-label,
+#number-label,
+#dropdown {
+  width: 750px;
+  height: 30px;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+label {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.text-input {
+  margin: 1.5rem 0;
+}
+
+.user-radio,
+.user-check {
+  min-height: 1.15rem;
+  min-width: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: #90ffbe;
+  cursor: pointer;
+}
+
+#feedback {
+  border-radius: 5px;
+  border: none;
+  font-size: inherit;
+  width: 700px;
+  height: 200px;
+}
+
+#submit {
+  width: 100px;
+  height: 50px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 1.9rem;
+  }
+
+  #description {
+    font-size: larger;
+  }
+
+  #header {
+    font-size: 1.5rem;
+  }
+
+  #survey-form {
+    max-width: 800px;
+    margin-bottom: 1rem;
+    padding: 20px;
+  }
+
+  #name-label,
+  #email-label,
+  #number-label,
+  #dropdown {
+    width: 750px;
+    height: 30px;
+  }
+
+  label {
+    margin: 0.5rem 0;
+  }
+
+  .text-input {
+    margin: 1.5rem 0;
+  }
+
+  .user-radio,
+  .user-check {
+    min-height: 1.15rem;
+    min-width: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+
+  button {
+    border-radius: 5px;
+    border: none;
+  }
+
+  #feedback {
+    width: 700px;
+    height: 200px;
+  }
+
+  #submit {
+    width: 100px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #description {
+    font-size: 1.5rem;
+  }
+
+  #survey-form {
+    max-width: 500px;
+    margin-bottom: 0.5rem;
+    padding: 10px;
+  }
+
+  #name-label,
+  #email-label,
+  #number-label,
+  #dropdown {
+    width: 400px;
+    height: 30px;
+  }
+  #feedback {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #description {
+    font-size: 1.5rem;
+  }
+
+  #survey-form {
+    max-width: 400px;
+    margin-bottom: 0.5rem;
+    padding: 10px;
+  }
+
+  #name-label,
+  #email-label,
+  #number-label,
+  #dropdown {
+    width: 400px;
+    height: 30px;
+  }
+
+  #feedback {
+    width: 400px;
+    height: 200px;
+  }
+}
