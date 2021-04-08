@@ -1,18 +1,31 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  background-image: url(../img/programming.jpg);
-  background-size: cover;
-  background-position: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.3rem;
   margin: 0;
   padding: 0;
 }
 
+body::before {
+  background-image: url(../img/programming.jpg);
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
 #title {
+  line-height: 1.1;
   color: #e0dfdc;
   letter-spacing: 0.1em;
   text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
@@ -34,6 +47,7 @@ body {
 
 #wrapper {
   width: 100%;
+  margin: 3.125rem auto 0 auto;
 }
 
 #header {
@@ -41,21 +55,26 @@ body {
 }
 
 #survey-form {
-  max-width: 800px;
-  margin: 0 auto 1.2rem auto;
   border-radius: 10px;
   background-color: #90acff;
   padding: 20px;
+  margin-bottom: 1rem;
+}
+
+.text-input {
+  margin: 0 auto 1.2rem auto;
+  padding: 0 0.2rem;
 }
 
 #name-label,
 #email-label,
 #number-label,
 #dropdown {
-  width: 750px;
-  height: 30px;
-  padding: 0 0.5rem;
-  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 2.35rem;
+  padding: 0.37rem 0.37rem;
+  border-radius: 0.25rem;
   border: none;
   font-family: inherit;
   font-size: inherit;
@@ -64,10 +83,6 @@ body {
 label {
   display: flex;
   margin: 0.5rem 0;
-}
-
-.text-input {
-  margin: 1.5rem 0;
 }
 
 .user-radio,
@@ -91,13 +106,15 @@ button:hover {
   border-radius: 5px;
   border: none;
   font-size: inherit;
-  width: 700px;
-  height: 200px;
+  width: 100%;
+  resize: vertical;
+  min-height: 115px;
 }
 
 #submit {
   width: 100px;
-  height: 50px;
+  border-radius: 2px;
+  padding: 0.75rem;
   font-size: 1.2rem;
   margin: 0 auto;
   display: block;
@@ -105,7 +122,25 @@ button:hover {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  #wrapper {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 576px) {
+  #wrapper {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 480px) {
+  #survey-form {
+    padding: 2.5rem;
+  }
+}
+
+/* @media (max-width: 768px) {
   #title {
     font-size: 1.9rem;
   }
@@ -203,7 +238,7 @@ button:hover {
   #email-label,
   #number-label,
   #dropdown {
-    width: 400px;
+    width: 350px;
     height: 30px;
   }
 
@@ -211,4 +246,4 @@ button:hover {
     width: 400px;
     height: 200px;
   }
-}
+} */
