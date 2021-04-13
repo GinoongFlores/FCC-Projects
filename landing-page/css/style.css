@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+#nav-bar {
+  float: right;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1.2rem 2rem;
+}
+
+li a,
+.brand-hover {
+  text-decoration: none;
+}
+
+li a:hover,
+.brand-hover:hover {
+  color: dodgerblue;
+  border-bottom: solid rgb(255, 255, 255);
+  border-top: solid rgb(255, 255, 255);
+  border-width: 2px;
+  border-radius: 3px;
+}
+
+#header {
+  font-size: 1.2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  font-family: inherit;
+  padding: 0.35rem 0;
+}
+
+#brand-name {
+  position: absolute;
+  bottom: 1.2rem;
+  margin-left: 4.5rem;
+  padding-bottom: 0.35rem;
+}
+
+#header-img {
+  margin-left: 1rem;
+}
+
+.container {
+  position: relative;
+  top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form #email,
+#submit {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#submit {
+  background: #000000;
+  color: #fff;
+  border: none;
+  height: 2.5rem;
+  font-weight: 500;
+}
+
+#submit:hover {
+  background: #ffd297;
+  color: #000000;
+}
+
+#form #submit {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 0.358rem;
+}
+
+#form #email {
+  width: 100%;
+  padding: 0.35rem;
+  margin-top: 0.358rem;
+}
+
+.container-section {
+  position: relative;
+  top: 100px;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.features {
+  margin: 1rem 1rem;
+  border: 1px solid #fac576;
+  background: #ffd297;
+  display: flex;
+  width: 600px;
+  height: 300px;
+}
+
+.info {
+  position: relative;
+  top: 60px;
+  margin: 0 1rem;
+  line-height: 1.8rem;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.armrest-size {
+  width: 55%;
+  height: auto;
+}
+
+.prices {
+  top: 100px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center all 3 boxes */
+  margin: 13rem 0;
+}
+
+.boxes {
+  width: 400px;
+  height: 350px;
+  border: 1px solid #000000;
+  margin: 0.45rem;
+}
+
+.header {
+  background-color: #fac576;
+  padding: 10px;
+}
+
+.price-details {
+  line-height: 2rem;
+  padding: 50px;
+}
+
+#video {
+  position: relative;
+  top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  line-height: 3rem;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+footer h3,
+a {
+  color: #ffffff;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+footer a:hover {
+  color: dodgerblue;
+  border-bottom: solid rgb(255, 255, 255);
+  border-top: solid rgb(255, 255, 255);
+  border-width: 2px;
+  border-radius: 3px;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+  .features {
+    margin: 0.35rem 0.35rem;
+  }
+
+  .boxes {
+    width: 25rem;
+  }
+
+  .price-details {
+    line-height: 2rem;
+    padding: 50px;
+  }
+
+  iframe {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 768px) {
+  ul li {
+    padding: 1rem 1rem;
+  }
+
+  #header {
+    padding: 0.35rem 1rem;
+  }
+
+  #brand-name {
+    bottom: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .features {
+    margin: 0.35rem 0;
+  }
+
+  .prices {
+    margin: 10rem 0;
+    flex-direction: column;
+  }
+
+  #video {
+    top: 10rem;
+  }
+}
+
+@media (max-width: 576px) {
+  ul li {
+    padding: 1rem 0.89rem;
+    font-size: 1.2rem;
+  }
+
+  #header {
+    padding: 0.38rem 0;
+  }
+
+  #brand-name {
+    margin-left: 4.5rem;
+  }
+
+  #header-img {
+    margin-left: 1rem;
+  }
+
+  #form > h2 {
+    font-size: 1.3rem;
+  }
+
+  #form #submit {
+    width: 6rem;
+  }
+
+  .container-section {
+    top: 8rem;
+    padding: 1rem;
+  }
+
+  .features {
+    margin: 0.59rem 1rem;
+    flex-direction: column;
+    height: 41rem;
+  }
+
+  .armrest-size {
+    width: 32rem;
+  }
+
+  .info {
+    top: 2.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .info > h3 {
+    line-height: 3rem;
+  }
+
+  .prices {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 35rem;
+  }
+
+  footer a {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  ul li {
+    padding: 1rem 0.69rem;
+    font-size: 1rem;
+  }
+
+  #brand-name {
+    font-size: 1.2rem;
+  }
+
+  #header-img {
+    margin-left: 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    height: 35rem;
+  }
+
+  .armrest-size {
+    width: 26rem;
+  }
+
+  .info {
+    top: 2.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .info > h3 {
+    line-height: 3rem;
+  }
+
+  .prices {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 28rem;
+  }
+
+  footer a {
+    padding: 0 1rem;
+  }
+}

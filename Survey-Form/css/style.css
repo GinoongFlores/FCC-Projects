@@ -13,6 +13,7 @@ body {
 
 body::before {
   background-image: url(../img/programming.jpg);
+  background-color: dodgerblue;
   background-size: cover;
   background-position: center;
   content: "";
