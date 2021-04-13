@@ -180,6 +180,10 @@ a {
   color: #ffffff;
 }
 
+footer {
+  width: 100%;
+}
+
 footer a {
   text-decoration: none;
   padding: 0 20px;
@@ -300,10 +304,6 @@ footer a:hover {
   iframe {
     width: 35rem;
   }
-
-  footer a {
-    padding: 0 1rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -313,7 +313,7 @@ footer a:hover {
   }
 
   #brand-name {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #header-img {
@@ -345,10 +345,6 @@ footer a:hover {
 
   iframe {
     width: 35rem;
-  }
-
-  footer a {
-    padding: 0 1rem;
   }
 }
 
@@ -398,16 +394,32 @@ footer a:hover {
   footer {
     font-size: 0.95rem;
   }
-}
+} */
 
 @media (max-width: 384px) {
   ul li {
-    padding: 1rem 0.35rem;
+    padding: 0.85rem 0.35rem;
     font-size: 0.85rem;
   }
 
   #brand-name {
-    font-size: 1rem;
-    padding-bottom: 0.35rem;
+    font-size: 0.85rem;
+    padding-bottom: 0.89rem;
   }
-} */
+
+  #form > h2 {
+    font-size: 1.1rem;
+  }
+
+  .boxes {
+    width: 20rem;
+  }
+
+  iframe {
+    width: 23rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
