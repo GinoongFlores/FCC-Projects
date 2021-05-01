@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Technical documentation</title>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>Java Documentation</header>
+    <ul>
+    <li class="navlink"><a href="#Java_Intro">Java Intro</a></li>
+    <li class="navlink"><a href="#Java_Syntax">Java Syntax</a></li>
+    <li class="navlink"><a href="#Java_Comments">Java Comments</a></li>
+    <li class="navlink"><a href="#Java_Variables">Java Variables</a></li>
+    <li class="navlink"><a href="#Java_Data_Types">Java Data Types</a></li>
+    <li class="navlink"><a href="#Java_Type_Casting">Java Type Casting</a></li>
+    <li class="navlink"><a href="#Java_Operators">Java Operators</a></li>
+    <li class="navlink"><a href="#Java_Strings">Java Strings</a></li>
+    <li class="navlink"><a href="#Java_Math">Java Math</a></li>
+    <li class="navlink"><a href="#Java_Booleans">Java Booleans</a></li>
+    <li class="navlink"><a href="#Java_If...Else">Java If...Else</a></li>
+    <li class="navlink"><a href="#Java_Switch">Java Switch</a></li>
+    <li class="navlink"><a href="#Java_While_Loop">Java While Loop</a></li>
+    <li class="navlink"><a href="#Java_For_Loop">Java For Loop</a></li>
+    <li class="navlink"><a href="#Java_Break/Continue">Java Break/Continue</a></li>
+    <li class="navlink"><a href="#Java_Arrays">Java Arrays</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Java_Intro">
+      <header>Java Introduction</header>
+      <hr>
+      <article>
+        <h3>What is Java? </h3>
+        <p>
+          Java is a popular programming language, created in 1995.
+          <br>
+          It is owned by Oracle, and more than 3 billion devices run in Java.
+          <br>
+          It is used for:
+        </p>
+
+        <ul>
+          <li>Mobile applications (specially Android apps)</li>
+          <li>Desktop applications</li>
+          <li>Web applications</li>
+          <li>Web servers and application servers</li>
+          <li>Games</li>
+          <li>Database connection</li>
+          <li>And much, much more!</li>
+        </ul>
+
+        <hr>
+        <header>Why Use Java? </header>
+        <ul>
+          <li>Java works on different platforms(Windows, Mac, Linux, Raspberry Pi, etc.)</li>
+          <li>It is one of the most popular programming language in the world</li>
+          <li>It is easy to learn and simple to use.</li>
+          <li>It is open-source and free</li>
+          <li>It is secure and fast</li>
+          <li>It has a huge community support (tens of million developers)</li>
+          <li>Java is an object oriented language which gives a clear structure to programs and allows code to be
+            reused,
+            lowering development costs</li>
+          <li>As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Syntax">
+      <header>Java Syntax</header>
+      <hr>
+      <article>
+        <h3>Java Syntax</h3>
+        <p>Assuming we created a Java file called Main.java, and we used the following code to print
+          "Hello World" to the screen:</p>
+        <p class="java-class">MyClass.java</p>
+        <code>
+          <span class="blue">public class</span> <span class="red">Main</span> {
+            <span class="blue">public static void</span> <span class="red">main</span> (<span class="red">String</span> [] args) {
+              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Hello World"</span>)
+            }
+          }
+        </code>
+
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Comments">
+      <header>Java Comments</header>
+      <hr>
+      <article>
+        <h3>Comments</h3>
+        <p>
+          Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent
+          execution when testing alternative code.
+
+          Single-line comments start with two forward slashes (<span class="red font">//</span>).
+
+          Any text between <span class="red font">//</span> and the end of the line is ignored by Java (will not be executed).
+
+          This example uses a single-line comment before a line of code:
+
+        </p>
+
+        <h4>Example</h4>
+        <code>
+          // This is a comment
+          <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Hello World"</span>);
+        </code>
+
+        <hr>
+        <h3>Multi-line Comments</h3>
+        <p>
+          Multi-line comments start with <span class="red font">/*</span> and ends with <span class="red font">*/</span>.
+
+          Any text between <span class="red font">/*</span> and <span class="red font">*/</span> will be ignored by Java.
+
+          This example uses a multi-line comment (a comment block) to explain the code:
+        </p>
+
+        <h4>Example</h4>
+        <code>
+          /* The code below will print the words Hello World
+          to the screen, and it is amazing */
+          <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Hello World"</span>);
+        </code>
+
+        <h5>Single or multi-line comments?</h5>
+        <p>It is up to you which you want to use. Normally, we use <span class="red font">//</span> for short comments, and <span class="red font">/* */</span> for longer.</p>
+      </article>  
+    </section>
+
+
+    <section class="main-section" id="Java_Variables">
+      <header>Java Variables</header>
+      <hr>
+      <article>
+        <h3>Java Variables</h3>
+        <p>
+          Variables are containers for storing data values.
+
+          In Java, there are different <strong>types</strong> of variables, for example:
+        </p>
+
+        <ul>
+          <li><span class="red font">String</span> - stores text, such as "Hello". String values are surrounded by double quotes</li>
+          <li><span class="red font">int</span> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+          <li><span class="red font">float</span> - stores floating point numbers, with decimal, such as 19.99 or - 19.99</li>
+          <li><span class="red font">char</span> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+          <li><span class="red font">boolean</span> - store values with two states: true or false</li>
+        </ul>
+
+        <h3>Declaring (Creating) Variables</h3>
+        <p>To create a variable, you must specify the type and assign it a value:</p>
+        <h4>Syntax</h4>
+        <code>
+          type variable = value;
+        </code>
+
+        <p>Where type is one of Java's types (such as int or String), and variable is the name of the variable
+          (such as x or name). The equal sign is used to assign values to the variable.
+     
+          To create a variable that should store text, look at the following example:</p>
+          <h4>Example</h4>
+          <p>Create a variable called <strong>name</strong> of type <span class="red font">String</span> and assign it the value <strong>"John"</strong>:</p>
+        <code>
+          <span class="red">String</span> name = <span class="green">"John"</span>;
+          <span class="red">System</span>.out.<span class="red">println</span>(name);
+        </code>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Data_Types">
+      <article>
+        <header>Java Data Types</header>
+        <hr>
+        <p>As explained in the previous chapter, a variable in Java must be a specified data type: </p>
+
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> myNum = <span class="magenta">5</span>;
+          <span class="blue">float</span> myFloatNum = <span class="magenta">5.99f</span>;
+          <span class="blue">char</span> myLetter = <span class="green">'D'</span>;
+          <span class="blue">boolean</span> myBool = <span class="magenta">true</span>;
+          <span class="blue">String</span> myText = <span class="green">"Hello"</span>;
+        </code>
+
+        <p>Data types are divided into two groups: </p>
+        <ul>
+          <li>Primitive data types - includes <span class="red font">byte</span>, <span class="red font">short</span>, <span class="red font">int</span>, <span class="red font">long</span>, <span class="red font">float</span>, <span class="red font">double</span>, <span class="red font">boolean</span> and <span class="red font">char</span></li>
+          <li>Non-primitive data types - such as String, Arrays and Classes (you will learn more about these
+            in a later chapter)</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Type_Casting">
+      <article>
+        <header>Java Type Casting</header>
+        <hr>
+        <p>Type casting is when you assign a value of one primitive data type to another type.
+
+          In Java, There are two types of casting:
+        </p>
+
+        <ul>
+          <strong><li>Widening Casting</strong> (automatically) - converting a smaller type to a larger type size</li>
+          <code>
+            <span class="red">byte</span> -> <span class="red">short</span> -> <span class="red">char</span> -> <span class="red">int</span> -> <span class="red">long</span> -> <span class="red">float</span> -> <span class="red">double</span>
+          </code>
+          <br>
+          <strong><li>Narrowing Casting</strong>(manually) - converting a larger type to a smaller size type</li>
+          <code>
+            <span class="red">double</span> -> <span class="red">float</span> -> <span class="red">long</span> -> <span class="red">int</span> -> <span class="red">char</span> -> <span class="red">short</span> -> <span class="red">byte</span>
+          </code>
+        </ul>
+
+        <h3>Widening Casting</h3>
+        <p>Widening casting is done automatically when passing a smaller size type to a larger size type:</p>
+
+        <h4>Example</h4>
+        <code>
+          <span class="blue">public class</span> <span class="red">Main</span> {
+            <span class="blue">public static void</span> <span class="red">main</span>(<span class="red">String</span>[] args) {
+              <span class="blue">int</span> myInt = <span class="magenta">9</span>;
+              <span class="blue">double</span> myDouble = myInt; // Automatic casting: int to double
+
+              <span class="red">System</span>.out.<span class="red">println</span>(myInt); // Outputs 9
+              <span class="red">System</span>.out.<span class="red">println</span>(myDouble); // Outputs 9.0
+            }
+          }
+        </code>
+
+        <h3>Narrowing Casting</h3>
+        <p>Narrowing casting must be done manually by placing the type in parentheses in front of the value:</p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">public class</span> <span class="red">Main</span> {
+            <span class="blue">public static void</span> <span class="red">main</span>(<span class="red">String</span>[] args) {
+              <span class="blue">double</span> myDouble = <span class="magenta">9.78</span>;
+              <span class="blue">int</span> myInt = (<span class="blue">int</span>) myDouble; // Manual casting: double to int
+
+              <span class="red">System</span>.out.<span class="red">println</span>(myDouble); // Outputs 9.78
+              <span class="red">System</span>.out.<span class="red">println</span>(myInt); // Outputs 9
+          }
+        }
+        </code>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Operators">
+      <header>Java Operators</header>
+      <hr>
+      <article>
+        <h3>Java Operators</h3>
+        <p>Operators are used to perform operations on variables and values.
+
+          In the example below, we use the <span class="red font"> +</span> <strong>operator</strong> to add together two values:
+        </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> x = <span class="magenta">100</span> + <span class="magenta">50</span>;
+        </code>
+        <p>Although the <span class="red">+</span> operator is often used to add together two values. Like in the example above it can
+          also be used to add together a variable and a value, or variable and another variable.
+        </p>
+        <br>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> sum1 = <span class="magenta">100</span> + <span class="magenta">50</span>; // 150 (100 + 50)
+          <span class="blue">int</span> sum2 = sum1 + <span class="magenta">250</span>; // 400 (150 + 250)
+          <span class="blue">int</span> sum3 = sum2 + sum2; // 800 (400 + 400)
+        </code>
+        <p>Java divides the operators into the following groups:</p>
+        <ul>
+          <li>Arithmetic operators</li>
+          <li>Assignment operators</li>
+          <li>Comparison operators</li>
+          <li>Logical operators</li>
+          <li>Bitwise operators</li>
+        </ul>
+
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Strings">
+      <header>Java Strings</header>
+      <hr>
+      <article>
+        <h3>Java Strings</h3>
+        <p>Strings are used for storing text.
+
+          A <span class="green">String</span> variable contains a collection of characters surrounded by double quotes:
+        </p>
+
+        <h4>Example</h4>
+        <p>Create a variable of type String and assign it a value:</p>
+        <code>
+          <span class="red">String</span> greeting = <span class="green">"Hello"</span>;
+        </code>
+
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Math">
+      <header>Java Math</header>
+      <hr>
+      <article>
+        <p>The Java Math class has many methods that allows you to perform mathematical tasks on numbers.</p>
+<hr>
+        <h3>Math.max(x,y)</h3>
+        <p>The <code><span class="red font">Math.max(x,y)</span></code> method can be used to find the largest value of x and y:</p>
+        <h4>Example</h4>
+        <code><span class="red">Math.max</span>(<span class="magenta">5,10</span>);</code>
+<hr>
+        <h3>Math.min(x,y)</h3>
+        <p>The <code><span class="red font">Math.min(x,y)</span></code> method can be used to find the lowest value of x and y:</p>
+        <h4>Example</h4>
+        <code><span class="red">Math.min(<span class="magenta">x,y</span>);</code>
+<hr> 
+        <h3>Math.sqrt(x)</h3>
+        <p>The <code class="red font">Math.sqrt(x)</code> method returns the square root of x:</code></p>
+        <h4>Example</h4>
+        <code><span class="red">Math.sqrt</span>(<span class="magenta">64</span>);</code>
+<hr>
+        <h3>Math.abs(x)</h3>
+        <p>The <code><span class="red font">Math.abs(x)</span></code> returns the absolute method (positive value of x:</p>
+        <h4>Example</h4>
+        <code><span class="red">Math.abs</span>(<span class="magenta">-4.7</span>);</code>
+        <hr>
+        <h3>Random Numbers</h3>
+        <p><code><span class="red font">Math.random</span>()</code> returns a random between 0.0 (inclusive), and 1.0 (exclusive)</p>
+        <code><span class="red">Math.random</span>();</code>
+        <p>To get more control over the random number, e.g. you only want a random number between 0 and
+          100, you can use the formula :
+        </p>
+        <code><span class="blue">int</span> randomNum = (<span class="blue">int</span>)(<span class="red">Math.random</span>() <span class="magenta">* 101</span>); // 0 to 100</code>
+
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Booleans">
+      <header>Java Booleans</header>
+      <hr>
+      <article>
+        <h3>Java Booleans</h3>
+        <p>Very often, in programming, you will need a data type that can only have one of two values, like: </p>
+        <ul>
+          <li>YES / NO</li>
+          <li>ON / OFF</li>
+          <li>TRUE / FALSE</li>
+        </ul>
+        <p>For this, Java has a <span class="red font">boolean</span> data type, which can take can take the values <span class="red font">true</span> or <span class="red font">false</span>.</p>
+        <hr>
+
+        <h3>Boolean Values</h3>
+        <p>A boolean type is declared with the <span class="red font">boolean</span> keyword and can only take the values <span class="red font">true</span> or <span class="red font">false</span>.</p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">boolean</span> isJavaFun = <span class="magenta">true</span>;
+          <span class="blue">boolean</span> isJavaDead = <span class="magenta">false</span>;
+          <span class="red">System</span>.out.<span class="red">println</span>(isJavaFun); //Outputs true
+          <span class="red">System</span>.out.<span class="red">println</span>(isJavaDead); //Outputs false
+
+        </code>
+        <p>However, it is more to return boolean values from boolean expressions, for conditional testing (see below).
+        </p>
+        <hr>
+        <h3>Boolean Expression</h3>
+        <p>A <strong>Boolean expressions</strong> is a Java expression that returns a Boolean value: <span class="magenta font">true</span> or <span class="magenta font">false</span>.
+
+          You can use a comparison operator, such as the <strong>greater than</strong> ( <span class="magenta font">></span> ) operator to find out if an
+          expression (or a variable) is true:
+        </p>
+
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> x = <span class="magenta">10</span>;
+          <span class="blue">int</span> y = <span class="magenta">9</span>;
+          <span class="red">System.out</span>.<span class="red">println</span>(x > y); // returns true, because 10 is higher than 9
+        </code>
+        <p>Or even easier:</p>
+        <h4>Example</h4>
+        <code>
+          <span class="red">System</span>.out.<span class="red">println</span>(<span class="magenta">10</span> > <span class="magenta">9</span>); // returns true, because 10 is higher than 9
+        </code>
+        <p>In the example below, we use the <strong>equal</strong> to (<span class="magenta">==</span>) operator to evaluate an expression:</p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> x = <span class="magenta">10</span>; 
+          <span class="red">System</span>.out.<span class="red">println</span>(x <span class="magenta">== </span>10</span>);
+        </code>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_If...Else">
+      <header>Java If..Else</header>
+      <hr>
+      <article>
+        <h3>Java Conditions and If Statements</h3>
+        <p>Java supports the usual logical conditions from mathematics: </p>
+        <ul>
+          <li>Less than: <span class="red font">a < b</span> </li> 
+          <li>Less than or equal to: <span class="red font">a <= b</span> </li> 
+          <li>Greater than: <span class="red font">a > b</span> </li>
+          <li>Greater than or equal to: <span class="red font">a >= b</span> </li>
+          <li>Equal to: <span class="red font">a == b</span> </li>
+          <li>Not Equal to: <span class="red font">a != b</span> </li>
+        </ul>
+
+        <p>You can use these conditions to perform different actions for different decisions.
+
+          Java has the following conditional statements:
+        </p>
+        <ul>
+          <li>Use <span class="red font">if</span> to specify a block of code to be executed, if a specified condition is true</li>
+          <li>Use <span class="red font">else</span> to specify a block of code to be executed, if the same condition is false</li>
+          <li>Use <span class="red font">else if</span> to specify a new condition to test, if the first condition is false</li>
+          <li>Use <span class="red font">switch</span> to specify many alternative blocks of code to be executed</li>
+        </ul>
+
+        <h3>The If Statement</h3>
+        <p>Use the <span class="red font">if</span> statement to specify a block of Java code to be executed if a condition is true. </p>
+        <h4>Syntax</h4>
+        <code>
+          <span class="blue">if</span> (condition) {
+          // block of code to be executed if the condition is true
+          }
+        </code>
+        <p class="note">Note that <span class="red font">if</span> is in lowercase letters. Uppercase letters (If or IF) will generate error.</p>
+        <p>In the example below, we test two values to find out if 20 is greater than 18. If the condition is
+          <span class="red font">true</span>, print some text:
+        </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">if</span> (<span class="magenta">20</span> > <span class="magenta">18</span>) {
+          <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"20 is greater than 18"</span>);
+          }
+        </code>
+        <p>We can also test variables: </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> x = <span class="magenta">20</span>;
+          <span class="blue">int</span> y = <span class="magenta">18</span>;
+          <span class="blue">if</span> (x > y) {
+          <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"x is greater than y"</span>);
+          }
+        </code>
+        <h5>Example explain</h5>
+        <p>In the example above we use two variable, <strong>x</strong> and <strong>y</strong>, to test whether x greater than (using the >
+          operator>. As x is 20, and is 18, and we know that 20 is greater than 18, we print to the screen that
+          "x is greater than y".
+        </p>
+
+        <h3>The else Statement</h3>
+        <p>Use the <span class="red font">else</span> statement to specify a block of code to be executed if the condition is false.</p>
+        <h4>Syntax</h4>
+        <code>
+          <span class="blue">if</span> (condition) {
+          // block of code to be executed if the condition is true
+          } <span class="blue">else</span> {
+          // block of code to be executed if the condition is false
+          }
+        </code>
+
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> time = <span class="magenta">20</span>;
+          <span class="blue">if</span> (time < <span class="magenta">18</span>) { 
+            <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good day.")</span>; 
+          } <span class="blue">else</span> { 
+            <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good evening."</span>);
+            } 
+            //Outputs "Good evening " 
+          </code> 
+          <h5>Example explain</h5>
+            <p>In the example, time (20) is greater than 18, so than condition is <span class="red font">false</span>. Because of this, we
+              move on the <span class="red font">else</span> condition and print the screen "Good evening". If the time we less than 18,
+              the program would print "Good day".
+            </p>
+
+            <h3>The else if Statement</h3>
+            <p>Use the <span class="red font">else</span> if statement to specify a new condition if the first condition is false.</p>
+            <h4>Syntax</h4>
+            <code>
+              <span class="blue">if</span> (condition 1) {
+              // block of code to be executed if condition1 is true
+              } <span class="blue">else if</span> (condition 2) {
+              // block of code to be executed if condition1 is false and condition2 is true
+              } <span class="blue">else</span> {
+              // block of code to be executed if both condition 1 and 2 is false
+              }
+            </code>
+            <h4>Example</h4>
+            <code>
+              <span class="blue">int</span> time = <span class="magenta">22</span>;
+              <span class="blue">if</span> (time < <span class="magenta">10</span>) { 
+                <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good morning."</span>); 
+              } 
+                <span class="blue">else if</span> (time < <span class="magenta">20</span>) { 
+                  <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good day."</span>) 
+                } 
+                <span class="blue">else</span> { 
+                  <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good evening."</span>); 
+                } // Outputs "Good evening" </code> <h5>Example
+                explain</h5>
+                <p>In the example above, this (22) is greater than 10, so the first condition is <span class="red font">false</span>. The next
+                  condition, in the <span class="red font">else if</span> statement, is also <span class="red font">false</span>, so we move on to the <span class="red font">else</span> condition since
+                  <strong>condition1</strong> and <strong>condition2</strong> is both <span class="red font">false</span> - and print the to the screen "Good evening".
+
+                  However, if the time was 14, our program would print "Good day."
+                </p>
+                <h3>Short Hand If..Else (Ternary Operator)</h3>
+                <p>There is also a short-hand if else, which is known as the ternary operator because it consists of
+                  three operands. It can be used to replace multiple lines of code with a single line. It is often used
+                  to
+                  replace simple if else statements:
+                </p>
+                <h5>Syntax</h5>
+                <code>variable = (condition) ? expressionTrue : expresionFalse;</code>
+
+                <p>Instead writing:</p>
+                <h4>Example</h4>
+                <code>
+                  <span class="blue">int</span> time = <span class="magenta">20</span>;
+                  <span class="blue">if </span>(time < <span class="magenta">18</span>) { 
+                    <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good day."</span>); 
+                  } <span class="blue">else</span> { 
+                    <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Good evening"</span>); 
+                  }
+                    </code> <p>You can simply write: </p>
+                    <h4>Example</h4>
+                    <code>
+                      <span class="blue">int</span> time = <span class="magenta">20</span>;
+                      <span class="red">String</span> result = (time < <span class="magenta">18</span>) <span class="magenta">?</span> <span class="green">"Good day" : "Good evening";</span>
+                      <span class="red">System</span>.out.<span class="red">println</span>(result); 
+                    </code>
+                        </article> </section> <section class="main-section" id="Java_Switch">
+                        <header>Java Switch</header>
+                        <hr>
+                        <article>
+                          <h3>Java Switch Statements</h3>
+                          <p>Use the <span class="red font"></span>switch statement to select one of many code blocs to be executed.</p>
+                          <h4>Syntax</h4>
+                          <code>
+                            <span class="blue">switch</span>(expression) {
+                            <span class="blue">case</span> x:
+                            // code block
+                            <span class="blue">break</span>;
+                            case y:
+                            // code block
+                            <span class="blue">break</span>;
+                            <span class="blue">default</span>;
+                            //code block
+                            }
+                          </code>
+                          <p>This is how it works:</p>
+                          <ul>
+                            <li>The <span class="red font">switch</span> expression is evaluated one</li>
+                            <li>The value of expression is compared with the value of each <span class="red font">case</span>.</li>
+                            <li>If there is a match, the associated block of code is executed.</li>
+                            <li>The <span class="red font">break</span> and <span class="red font">default</span> keyword are optional, and will be described later in this chapter
+                            </li>
+                          </ul>
+                          <p>The example below uses the weekday number to calculate the weekday name:</p>
+                          <h4>Example</h4>
+                          <code>
+                            <span class="blue">int</span> day = <span class="magenta">4</span>;
+                            <span class="blue">switch</span> (day) {
+                              <span class="blue">case</span> <span class="magenta">1</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Monday"</span>);
+                              <span class="blue">break</span>;
+                              <span class="blue">case</span> <span class="magenta">2</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Tuesday"</span>);
+                              <span class="blue">break</span>;
+                              <span class="blue">case</span> <span class="magenta">3</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Wednesday"</span>);
+                              <span class="blue">break</span>;
+                              <span class="blue">case</span> <span class="magenta">4</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Thursday"</span>);
+                              <span class="blue">break</span>;
+                              <span class="blue">case</span> <span class="magenta">5</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Friday"</span>);
+                              <span class="blue">break</span>;
+                              <span class="blue">case</span> <span class="magenta">6</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Saturday"</span>);
+                              <span class="blue">break</span>;
+                              <span class="blue">case</span> <span class="magenta">7</span>:
+                              <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Sunday"</span>);
+                              <span class="blue">break</span>;
+                            }
+                            // Outputs "Thursday" (day 4)
+                          </code>
+                          <hr>
+                          <h3>The break keyword</h3>
+                          <p>
+                            When Java reaches a <span class="red font">break</span> keyword, it breaks out of the switch block.
+
+                            This will stop the execution of more code and case testing inside the block.
+
+                          </p>
+                          <p class="note">Note: A break can save a lot of execution time because it "ignores of all rest
+                            of the code
+                            in the switch block.
+                          </p>
+                          <hr>
+                          <h3>The default Keyword</h3>
+                          The default keyword specifies some code to run if there is no case match:
+                          <h4>Example</h4>
+                          <code>
+                            <span class="blue">int</span> day = <span class="magenta">4</span>;
+                            <span class="blue">switch</span>(day) {
+                            <span class="blue">case</span> <span class="magenta">6</span>:
+                            <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Today is Saturday"</span>);
+                            <span class="blue">break</span>;
+                            <span class="blue">case</span> <span class="magenta">7</span>:
+                            <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Today is Sunday"</span>);
+                            <span class="blue">break</span>;
+                            <span class="blue">default</span>:
+                            <span class="red">System</span>.out.<span class="red">println</span>(<span class="green">"Looking forward to the Weekend"</span>);
+                            }
+                            // Outputs "Looking forward to the Weekend"
+                          </code>
+                          <p class="note">Note: That if the default statement is used as the last statement in a switch
+                            block, it does not
+                            need a break.
+                          </p>
+
+                        </article>
+    </section>
+
+    <section class="main-section" id="Java_While_Loop">
+      <header>Java While Loop</header>
+      <hr>
+      <article>
+        <h3>Loops</h3>
+        <p>Loops can execute a block of code as long as a specified condition is reached.
+
+          Loops are handy because they save time, reduce errors, and they make code more readable.
+        </p>
+        <hr>
+        <h3>Java While Loop</h3>
+        <p>The <span class="red font">while</span> loop loops through a block of code as long as a specified condition is true:</p>
+        <h4>Syntax</h4>
+        <code>
+          <span class="blue">while</span> (condition) {
+          // code block to be executed
+          }
+        </code>
+        <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is
+          less than 5:
+        </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">int</span> i = <span class="magenta">0</span>;
+          <span class="blue">while</span> (i < <span class="magenta">5</span>) { 
+            <span class="red">System</span>.out.<span class="red">println</span>(i); 
+           i<span class="magenta">++</span>; 
+          } </code>
+           <p class="note">Do not forget to increase the variable
+            used in the condition, otherwise the loop will never end!
+            </p>
+            <hr>
+            <h3>The Do/While Loop</h3>
+            <p>The <span class="red font">do/while</span> loop is a variant of th while loop. This loop will execute the code block once, before
+              checking if the condition is true, then it will repeat the loop as long as the condition is true.
+            </p>
+            <h4>Syntax</h4>
+            <code>
+              <span class="blue">do</span> {
+              // code block to be executed
+              }
+              <span class="blue">while</span> (condition);
+            </code>
+            <p>The example below uses do/while loop. The Loop will always be executed at least once, even if the
+              condition is false, because the code block is executed before than the condition is tested.
+            </p>
+            <h4>Example</h4>
+            <code>
+              <span class="blue">int</span> i = <span class="magenta">0</span>;
+              <span class="blue">do</span> {
+              <span class="red">System</span>.out.<span class="red">println</span>(i);
+              i<span class="magenta">++</span>;
+              }
+              <span class="blue">while</span> (i < <span class="magenta">5</span>); </code> <p class="note">Do not forget to increase used in the condition, otherwise the loop
+                will never end!</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_For_Loop">
+      <header>Java For Loop</header>
+      <article>
+        <hr>
+        <h3>Java For Loop</h3>
+        <p>When you know exactly how many times you want to loop through a block of code, use the <span class="red font">for</span> loop
+          instead of a <span class="red font">while</span> loop:
+        </p>
+        <h4>Syntax</h4>
+        <code>
+          <span class="blue">for</span> (statement <span class="magenta">1</span>; statement <span class="magenta">2</span>; statement <span class="magenta">3</span>) {
+          // code block to be executed
+          }
+        </code>
+        <p>
+          <strong>Statement 1</strong> is executed (one time) before the execution of the code block.
+
+          <strong>Statement 2</strong> defines the condition for executing the code block.
+
+          <strong>Statement 3</strong> is executed (every time) after the code block has been executed.
+
+          The example below will print the numbers 0 to 4:
+        </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">for</span> (<span class="blue">int</span> i = <span class="magenta">0</span>; i < <span class="magenta">5</span>; i<span class="magenta">++</span>) { 
+            <span class="red">System</span>.out.<span class="red">println</span>(i); 
+          } 
+          </code> 
+            <h5>Example explain</h5>
+            <p>
+             Statement 1 sets a variable before the loop starts (int 1 = 0).
+
+             Statement 2 defines the condition for the loop to run (i must be less than 5 ). If the condition is true,
+              the loop will start over again, if it is false, the loop will end.
+
+             Statement 3 increase a value (i++) each time the code block in the loop has been executed.
+            </p>
+            <hr>
+            <h3>Another Example</h3>
+            <p>This example will only print even values between 0 and 10:</p>
+            <h4>Example</h4>
+            <code>
+              <span class="blue">for</span>(int i = <span class="magenta">0</span>; i <= <span class="magenta">10</span>; i = i + <span class="magenta">2</span>) { 
+              <span class="red">System</span>.out.<span class="red">println</span>(i); 
+              } 
+            </code> 
+            <hr>
+                <h3>For-Each Loop</h3>
+                <p>There is also a "<strong>for-each</strong>" loop, which is used exclusively to loop through elements in an <strong>array</strong>:
+                </p>
+                <h5>Syntax</h5>
+                <code>
+                  <span class="blue">for</span> (type variableName : arrayName) {
+                  // code block to be executed
+                  }
+                </code>
+                <p>The following example outputs all elements in the <strong>cars</strong> array, using a "<strong>for-each</strong>" loop. </p>
+                <h4>Example</h4>
+                <code>
+                  <span class="blue">String</span> [] cars = {<span class="green">"Volvo"</span>, <span
+                    class="green">"BMW"</span>, <span class="green">"Ford"</span>, <span class="green">"Mazda</span>"}
+                  <span class="blue">for</span>(<span class="red">String</span> i : cars) {
+                  <span class="red">System</span>.out.<span class="red">println</span>(i)
+                  }
+                </code>
+                <p class="note">Don't worry if you don't understand the example above. You will learn more about Arrays
+                  in
+                  the <a href="#Java_Arrays">Java Arrays chapter</a></p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Break/Continue">
+      <header>Java Break and Continue</header>
+      <hr>
+      <article>
+        <h3>Java Break</h3>
+        <p>You have already seen the <span class="red font">break</span> statement used in an earlier chapter of this
+          tutorial. It was used to "jump out" of a <span class="red font">switch</span> statement.
+
+          The <span class="red font">break</span> statement can also be used to jump out of <strong>loop</strong>.
+
+          This example jumps out of the loop when i equal 4:
+        </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">for</span> (<span class="blue">int</span> i = <span class="magenta">0</span>; i < <span
+            class="">10</span>; i<span class="magenta">++</span>) {
+            <span class="blue">if</span> (i == <span class="magenta">4</span>) {
+            <span class="blue">break</span>;
+            }
+            <span class="red">System</span>.out.<span class="red">println</span>(i);
+            }
+        </code>
+        <hr>
+        <h3>Java Continue</h3>
+        <p>The <span class="red font">continue</span> statement break on iteration (in the loop), if a specified
+          condition occurs, and continues with the next iteration in the loop.
+
+          This examples skips the value of 4:
+        </p>
+        <h4>Example</h4>
+        <code>
+          <span class="blue">for</span> (<span class="blue">int</span> i = <span class="magenta">0</span>; i < <span
+            class="magenta">10</span>; i<span class="magenta">++</span>) {
+            <span class="blue">if</span> (i == <span class="magenta">4</span>) {
+            <span class="blue">continue;</span>
+            }
+            <span class="red">System</span>.out.<span class="red">println</span>(i);
+            }
+        </code>
+        <hr>
+        <h3>Break and Continue in While Loop</h3>
+        <p>You can also use break and continue in while loops:</p>
+        <h4>Break Example</h4>
+        <code>
+          <span class="blue">int</span> i = <span class="magenta">0</span>;
+          <span class="blue">while</span> (i < <span class="magenta">10</span>) {
+            <span class="red">System</span>.out.<span class="red">println</span>(i);
+            i<span class="magenta">++;</span>
+            <span class="blue">if</span>(i == <span class="magenta">4</span>) {
+            <span class="blue">break;</span>
+            }
+            }
+        </code>
+        <h4>Continue Example</h4>
+        <code>
+          <span class="blue">int</span> i = <span class="magenta">0</span>;
+          <span class="blue">while</span>(i <span class="magenta">10</span>) {
+          <span class="blue">if</span> (i == <span class="magenta">4</span>){
+          i<span class="violet"><span class="magenta">++</span>;
+            <span class="blue">continue;</span>
+            }
+            <span class="red">System</span>.out.<span class="red">println</span>(i);
+            i<span class="magenta">++;</span>
+            }
+        </code>
+
+      </article>
+    </section>
+
+    <section class="main-section" id="Java_Arrays">
+      <header>Java Arrays</header>
+      <hr>
+      <article>
+        <h3>Java Arrays</h3>
+        <p>Arrays are used to store multiple value in a single value, instead of declaring separate variables
+          for each value.
+
+          To declare an array, define the variable type with <strong>square brackets</strong>:
+        </p>
+        <code>
+          <span class="red">String</span> [] cars;
+        </code>
+        <p>We have now declared a variable that holds an array of strings. To insert values to it, we can use an
+          array literal - place the values in a comma-separated list, inside curly braces:
+        </p>
+        <code>
+          <span class="red">String</span> [] cars = {<span class="green">"Volvo"</span> , <span
+            class="green">"BMW"</span> , <span class="green">"Ford"</span> , <span class="green">"Mazda"</span>};
+        </code>
+        <p>To create an array of integers, you could write. </p>
+        <code>
+          <span class="blue">int</span> [] myNum = {<span class="red">10</span>, <span class="red">20</span>, <span
+            class="red">30</span>, <span class="red">40</span> }
+        </code>
+        <h3>Access the Element of an Array</h3>
+        <p>
+          You can access an array element of referring to the index.
+
+          This statement accesses the value of the first element in the cars:
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section">
+      <header>Reference</header>
+      <hr>
+      <article>
+        <h4>All documentation gathered from this page is taken from <a href="https://www.w3schools.com/">w3schools.com</a></h4>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+</html>
