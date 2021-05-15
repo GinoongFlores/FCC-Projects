@@ -9,15 +9,20 @@
   --black: #000;
 }
 
+/* Base reset */
+
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Box-sizing and font sizing */
 *::after,
 *::before {
   box-sizing: inherit;
 }
+
+/* Base styles */
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -39,6 +44,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
+/* Navigation links */
 
 #navbar {
   background-color: #212529;
@@ -72,10 +79,14 @@ a {
   color: dodgerblue;
 }
 
+/* Images in projects */
+
 img {
   display: block;
   width: 100%;
 }
+
+/* Welcome */
 
 #welcome-section {
   font-size: 1.5rem;
@@ -90,6 +101,8 @@ img {
   background-color: #212529;
 }
 
+/* Projects */
+
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
@@ -102,6 +115,7 @@ img {
   border-bottom: 0.2rem solid black;
 }
 
+/* "Automagic" image grid using no media queries  */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -140,8 +154,7 @@ img {
   padding: 2rem 0.5rem;
 }
 
-.project-title:hover {
-}
+/* Contact */
 
 .contact-section {
   display: flex;
@@ -189,6 +202,8 @@ img {
   margin-right: 1rem;
 }
 
+/* Contact hovers */
+
 #fb:hover {
   color: #4267b2;
 }
@@ -209,6 +224,8 @@ img {
   color: #15a4e6;
 }
 
+/* Footer */
+
 footer {
   display: flex;
   justify-content: space-evenly;
@@ -226,6 +243,7 @@ footer a:hover {
   color: #15a4e6;
 }
 
+/* Typing Effect */
 .sentence::after {
   content: "|";
   animation: blink 0.6s linear infinite alternate;
@@ -247,4 +265,56 @@ footer a:hover {
   100% {
     opacity: 0;
   }
+}
+
+/* Media queries */
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 490 / 16px = 30.625em  */
+@media (max-width: 30.625em) {
+  .project-section {
+    padding: 6rem 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem; 
+  }
+
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
 }
