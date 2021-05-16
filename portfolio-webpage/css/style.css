@@ -2,11 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
 /* !Custom Variables */
 :root {
-  --something-gray: #343a40;
-  --project-section: #a5a58d;
-  --navbar-color: #d1d0d0;
-  --hover-code: #f5f1f1;
-  --black: #000;
+  --navbar: #212529;
+  --welcome-section: #212529;
+  --project-section: #343a40;
+  --contact-section: #495057; 
+  --white-color: #F2F3F5;
+  --links-hover: #167BDA;
+  --button-show-all: #6c757d;
 }
 
 /* Base reset */
@@ -17,6 +19,7 @@
 }
 
 /* Box-sizing and font sizing */
+*,
 *::after,
 *::before {
   box-sizing: inherit;
@@ -41,6 +44,12 @@ h1 {
 
 html {
   box-sizing: border-box;
+
+   /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  color: var(--white-color);
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -48,7 +57,7 @@ html {
 /* Navigation links */
 
 #navbar {
-  background-color: #212529;
+  background-color: var(--navbar);
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -65,7 +74,7 @@ html {
 }
 
 a {
-  color: var(--navbar-color);
+  color: var(--white-color);
   text-decoration: none;
 }
 
@@ -76,7 +85,7 @@ a {
 }
 
 .nav-list a:hover {
-  color: dodgerblue;
+  color: var(--links-hover);
 }
 
 /* Images in projects */
@@ -90,7 +99,7 @@ img {
 
 #welcome-section {
   font-size: 1.5rem;
-  color: var(--navbar-color);
+  color: var(--white-color);
   line-height: 2;
   display: flex;
   flex-direction: column;
@@ -98,7 +107,7 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #212529;
+  background-color:var(--welcome-section);
 }
 
 /* Projects */
@@ -106,13 +115,14 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background-color: #343a40;
+  background-color: var(--project-section);
 }
 
 .project-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid black;
+  line-height: 1.5;
+  border-bottom: 0.2rem solid var(--white-color);
 }
 
 /* "Automagic" image grid using no media queries  */
@@ -128,8 +138,8 @@ img {
 
 .project-image {
   margin-bottom: 0.5rem;
-  height: 100%;
   width: 100%;
+  height: calc(100% - 6rem);
   object-fit: cover;
 }
 
@@ -139,17 +149,17 @@ img {
 }
 
 .project:hover .code {
-  color: dodgerblue;
+  color: var(--links-hover);
 }
 
 .project {
-  background: gray;
+  background: var(--welcome-section);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
 .project-title {
-  color: var(--navbar-color);
+  color: var(--white-color);
   font-size: 2rem;
   padding: 2rem 0.5rem;
 }
@@ -165,7 +175,7 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background-color: #495057;
+  background-color: var(--contact-section);
 }
 
 .contact-section-header > h2 {
@@ -195,6 +205,26 @@ img {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background-color: var(--button-show-all);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background:var(--links-hover);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(3px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
 }
 
 .fab,
@@ -230,7 +260,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: #6c757d;
+  background: var(--welcome-section);
   border-top: 4px solid var(--black);
   color: var(--hover-code);
 }
@@ -240,7 +270,7 @@ footer > p {
 }
 
 footer a:hover {
-  color: #15a4e6;
+  color: var(--links-hover);
 }
 
 /* Typing Effect */
@@ -318,3 +348,23 @@ footer a:hover {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
